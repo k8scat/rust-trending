@@ -10,4 +10,5 @@ FROM ${TARGETARCH} AS build
 
 FROM alpine
 COPY --from=build /x/bin/rust-trending /usr/local/bin/rust-trending
+ENV RUST_LOG=info
 CMD ["rust-trending"]

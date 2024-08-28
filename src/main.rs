@@ -282,7 +282,7 @@ async fn generate_description(content: &str) -> Result<String> {
         .json(&json!({
             "model": "gemini-1.5-pro",
             "messages": [
-                {"role": "user", "content": format!("假设你是一名资深技术专家，精通开源项目，请基于以下开源项目内容写一段简介内容：\n{}", content)}
+                {"role": "user", "content": format!("假设你是一名Rust语言的资深技术专家，精通Rust语言的开源项目，请基于以下开源项目内容写一段简介内容，用中文回答：\n{}", content)}
             ],
         }))
         .send()
